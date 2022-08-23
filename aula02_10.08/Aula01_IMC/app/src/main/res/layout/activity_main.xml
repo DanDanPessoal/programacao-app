@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+
+        android:id="@+id/tv_title_aula01"
+        android:layout_width="fill_parent"
+        android:layout_height="12mm"
+        android:text="Aula01"
+        android:textSize="90px"
+        android:paddingLeft="100px"
+        android:paddingTop="40px"
+        android:textColor="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="parent"
+        android:background="@color/purple_700"
+
+    />
+
+    <TextView
+
+        android:id="@+id/tv_title_cal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calculadora IMC"
+        android:textSize="70px"
+        android:padding="30px"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_aula01"
+        app:layout_constraintLeft_toLeftOf="parent"
+
+    />
+
+    <EditText
+
+        android:id="@+id/et_input_nome"
+        android:layout_width="420px"
+        android:layout_height="120px"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_cal"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:hint="Digite o seu nome"
+        android:inputType="text"
+
+    />
+
+    <EditText
+
+        android:id="@+id/et_input_idade"
+        android:layout_width="420px"
+        android:layout_height="120px"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title_cal"
+        app:layout_constraintLeft_toRightOf="@+id/et_input_nome"
+        android:hint="Digite a sua idade"
+        android:inputType="number"
+
+    />
+
+    <EditText
+
+        android:id="@+id/et_input_altura"
+        android:layout_width="520px"
+        android:layout_height="120px"
+        app:layout_constraintTop_toBottomOf="@+id/et_input_nome"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:hint="Digite a sua altura(cm)"
+        android:inputType="number"
+
+    />
+
+    <EditText
+
+        android:id="@+id/et_input_peso"
+        android:layout_width="520px"
+        android:layout_height="120px"
+        app:layout_constraintTop_toBottomOf="@+id/et_input_idade"
+        app:layout_constraintLeft_toRightOf="@+id/et_input_altura"
+        android:hint="Digite o seu peso (kg)"
+        android:inputType="numberDecimal"
+
+    />
+
+    <Button
+
+        android:id="@+id/btn_calcular"
+        android:layout_width="fill_parent"
+        android:layout_height="150px"
+        app:layout_constraintCircleRadius="100px"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_input_altura"
+        android:text="Calcular"
+        android:textSize="50px"
+        android:onClick="cal"
+
+    />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,193 @@
+// ---------------------------------------------------------------------------------------------------------
+// fun = function
+fun main() {
+    
+// ---------------------------------------------------------------------------------------------------------
+//  Para criar constantes, é necessário usar "val" de valor
+ 	val nome: String = "Dan"
+    
+//  é possivel usar tipagem dinâmica, apenas atribuindo o valor, para ele já virar do tipo que ele receber   
+    val nome2 = "Dan2"
+    
+// ---------------------------------------------------------------------------------------------------------
+//  Para criar variáveis, é necessário usar "var" de variavel
+	var idade: Int = 26
+    
+//  Usando tipagem dinâmica é possivel com variável também, mas quando ele assume um tipo, 
+//  Ele não aceita outro, obviamente   
+   	var idade2 = 26
+
+// ---------------------------------------------------------------------------------------------------------
+// CONVERSÃO
+//  Conversão de um tipo para o outro
+	var numero = 100
+    var numeroEmDouble = numero.toDouble()
+    var texto = "200"
+    var textoEmInt = texto.toInt()
+//  E assim por diante
+ 
+// ---------------------------------------------------------------------------------------------------------
+// TERNÁRIO
+
+    var maiorIdade = 20
+	var num = if(maiorIdade > 18) "Maior de idade"
+    		  else "Menor de idade"     
+    
+// ---------------------------------------------------------------------------------------------------------
+// INVOCANDO FUNCTION'S
+ 
+//  EXIBIÇÃO E CHAMADA DE FUN   
+//  println = sout	   
+	println("-".repeat(10))
+    println("Hello, world!!!")
+
+    println()
+    println("-".repeat(10))
+    println(calculadora(10,20,"+"))
+    
+    println()
+    println("-".repeat(10))
+    println(calculadora(10,20,"-"))
+    
+    println()
+    println("-".repeat(10))
+    println(calculadora(10,20,"*"))
+    
+    println()
+    println("-".repeat(10))
+    println(calculadora(10,20,"/"))
+    
+    println()
+    println("-".repeat(10))
+    println("Usando calculadora usando When")
+    println(calculadoraWithWhen(10, 30, "+"))
+    
+    println()
+    println("-".repeat(10))
+    println("Usando a fun rolarDados()")
+    println(rolarDados())
+    
+    println()
+    println("-".repeat(10))
+    println("Usando a fun sorteio")
+    println(sortear(10, 30))
+    
+// ---------------------------------------------------------------------------------------------------------
+// USANDO A DATA CLASS
+
+//  Para criar a instância do objeto usuário, eu simples faço igual o código abaixo   
+//  posso usar tanto val quanto var para criar o user, entretanto se eu usar a constante
+//  não pode atribuir outro usuário á ele, ENTRETANTO, poderei mudar seus atributos, se forem var
+
+//  várias formas de criar instâncias do data class
+//  Criando os atributos na hora da instanciação
+    val user1 = usuario("Daniel", 19, 4)
+    
+    println()
+    println("-".repeat(10))
+    println("exibindo apenas o nome do user1")
+    println(user1.nome)
+    
+//  Criando o  objeto vazio e, atribuindo depois os atributos
+//  NOTA: para isso os atributos tem que ser null safety, para permitir valores nulos   
+    var user2: usuario = usuario()
+    
+    user2.nome = "Daniel 2"
+    user2.idade = 33
+    user2.semestre = 3
+    
+    println()
+    println("-".repeat(10))
+    println("exibindo todos os atributos do user2")
+    println(user2)
+
+//  Criando o objeto, mas especificando os atributos que eu estou atribuindo.     
+    val user3 = usuario(
+    
+        nome = "Daniel 3",
+        idade = 12,
+        semestre = 2
+        
+    )
+    println()
+    println("-".repeat(10))
+    println("exibindo apenas a idade do user3")
+    println(user3.idade)
+    
+}
+
+// ---------------------------------------------------------------------------------------------------------
+// tipagem vem depois do ":" e do nome do objeto
+// tipagem da function, fica depois dos parâmetros
+fun calculadora(n1: Int, n2:Int, op:String): String{
+    
+    if(op == "+"){
+        
+//      O "$" permite um acesso simples a uma variável
+//      Mas para uma operação ou o uso de uma propriedade da variável é necessario usar "${}"    
+    	return "O resultado de $n1 + $n2 é ${n1 + n2}"    
+        
+    }else if(op == "-"){
+        
+        return "O resultado de $n1 - $n2 é ${n1 - n2}"
+        
+    }else if(op == "*"){
+        
+        return "O resultado de $n1 * $n2 é ${n1 * n2}"
+        
+    }else if (op == "/"){
+        
+        return "O resultado de $n1 / $n2 é ${n1 / n2}"
+        
+    }
+    
+    return "Operação inválida"
+    
+}
+
+// ---------------------------------------------------------------------------------------------------------
+fun calculadoraWithWhen(n1: Int, n2: Int, op: String): String{
+    
+//      Switch case no kotlin
+//      o return when, significa que ele retorna o que o when retornar
+//      o when recebe uma variavel, e dentro dele você mapeia os cenários do when
+//      quando a variável que ela recebe, no caso "op", recebe "+", ele faz algo
+//      isso é indicado pela "->", então se "op" receber "+" ele executa o que estiver depois da seta
+//      É possivel abrir um bloco de código depois da seta, usando "-> {}"
+//      se não acontecer nada do que está mapeado, cai no "else" e executa o que estiver nele
+     
+        return when(op){
+        
+            "+" -> "O resultado de $n1 + $n2 é ${n1 + n2}"
+            "-" -> "O resultado de $n1 - $n2 é ${n1 - n2}"
+            "*" -> "O resultado de $n1 * $n2 é ${n1 * n2}"
+            "/" -> "O resultado de $n1 / $n2 é ${n1 / n2}"
+            else -> "Operação inválida"
+        
+    	}
+    
+}
+
+// ---------------------------------------------------------------------------------------------------------
+// RANDOMIZAÇÃO E INTERVALO
+// É possivel retornar algo sem precisar colocar o return,é só atribuir direto depois da tipagem da função
+// É possivel criar um intervalo usando o ".." entre números ou letras
+// Criando assim um intervalo, onde inclui dos dois lados
+// Para randomizar isso, apenas usando a propriedade, depois do intervalo, ".random()"
+fun rolarDados(): Int = (1..6).random()
+
+// podemos usar os parametros também para criar o intervalo e randomizar
+fun sortear(inicio: Int, fim: Int): Int = (inicio..fim).random()
+
+// ---------------------------------------------------------------------------------------------------------
+
+// o data class, é como se eu criasse um objeto de usuario com atributos
+// o interessante dele é que não preciso de getters e setters nem to string
+// o próprio compilador resolve isso, fica fácil de chamar ou atribuir seus atributos.
+data class usuario(
+
+    var nome: String? = "",
+    var idade: Int? = null,
+    var semestre: Int? = null
+    
+)
