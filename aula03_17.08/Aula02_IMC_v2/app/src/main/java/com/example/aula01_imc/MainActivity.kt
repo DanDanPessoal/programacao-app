@@ -46,7 +46,6 @@ class MainActivity : AppCompatActivity() {
         val alerta = AlertDialog.Builder(this);
 
         findViewById<TextView>(R.id.tv_resultado_imc).text = "Olá, $nome seu imc é ${"%.2f".format(imc)}"
-
         alerta.setTitle("\nResultado do IMC\n")
         alerta.setMessage(
             """ 
