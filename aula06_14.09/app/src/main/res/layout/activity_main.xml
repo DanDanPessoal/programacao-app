@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:padding="10dp"
+    >
+
+    <TextView
+
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quindle"
+        android:textFontWeight="900"
+        android:fontFamily="arial"
+        android:textSize="40sp"
+        android:textAlignment="center"
+
+    />
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Minha Biblioteca"
+        android:fontFamily="arial"
+        android:textFontWeight="900"
+        android:textSize="16sp"
+
+    />
+
+    <HorizontalScrollView
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+
+                android:id="@+id/iv_hp_pedra"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:src="@drawable/harry_potter_pedra_filosofal"
+                android:scaleType="fitStart"
+
+            />
+
+            <ImageView
+
+                android:id="@+id/iv_hp_calice"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:src="@drawable/harry_potter_calice_fogo"
+                android:scaleType="fitStart"
+
+            />
+
+            <ImageView
+
+                android:id="@+id/iv_hp_camara"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:src="@drawable/harry_potter_camara_secreta"
+                android:scaleType="fitStart"
+
+            />
+
+            <ImageView
+
+                android:id="@+id/iv_hp_Azkaban"
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:src="@drawable/harry_potter_prisioneiro_azkaban"
+                android:scaleType="fitStart"
+
+            />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Loja"
+        android:textFontWeight="900"
+        android:fontFamily="arial"
+        android:textSize="16dp"
+        android:layout_marginTop="10dp"
+
+    />
+
+    <HorizontalScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+             <ImageView
+
+                 android:layout_width="150dp"
+                 android:layout_height="200dp"
+                 android:src="@drawable/codigo_limpo"
+                 android:scaleType="fitStart"
+
+             />
+
+            <ImageView
+
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:src="@drawable/homem_rico_babilonia"
+                android:scaleType="fitStart"
+
+            />
+
+            <ImageView
+
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:src="@drawable/mindset"
+                android:scaleType="fitStart"
+
+            />
+
+            <ImageView
+
+                android:layout_width="150dp"
+                android:layout_height="200dp"
+                android:src="@drawable/pequeno_principe"
+                android:scaleType="fitStart"
+
+            />
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</LinearLayout>

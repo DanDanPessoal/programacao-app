@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TelaLeitor"
+    >
+
+    <TextView
+
+        android:id="@+id/tv_capitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:text="Capitulo Um"
+        android:textFontWeight="900"
+        android:fontFamily="arial"
+        android:textSize="30dp"
+
+    />
+
+    <TextView
+
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_capitulo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Titulo"
+        android:textSize="20dp"
+        android:fontFamily="arial"
+        android:textFontWeight="900"
+        android:layout_marginTop="20dp"
+
+    />
+
+    <ScrollView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/tv_title"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+            <TextView
+
+                android:id="@+id/tv_texto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="15dp"
+                android:textAlignment="textStart"
+                tools:text = "O Sr. e a Sra. Dursley, da rua dos Alfeneiros, no 4, se
+                orgulhavam de dizer que eram perfeitamente normais, muito bem, obrigado.
+                Eram as últimas pessoas no mundo que se esperaria que se metessem em
+                alguma coisa estranha ou misteriosa, porque simplesmente não compactuavam
+                com esse tipo de bobagem.
+                O Sr. Dursley era diretor de uma firma chamada Grunnings,
+                que fazia perfurações. Era um homem alto
+                e corpulento quase sem pescoço, embora tivesse enormes bigodes.
+                A Sra. Dursley era magra e loura e tinha um pescoço quase duas
+                vezes mais comprido que o normal, o que era muito útil porque ela passava
+                grande parte do tempo espichando-o por cima da cerca do jardim para
+                espiar os vizinhos. Os Dursley tinham um filhinho chamado Dudley, o Duda,
+                e em sua opinião não havia garoto melhor em nenhum lugar do mundo.
+                Os Dursley tinham tudo que queriam, mas tinham também um segredo,
+                e seu maior receio era que alguém o descobrisse. Achavam que não
+                iriam aguentar se alguém descobrisse a existência dos Potter. A
+                Sra. Potter era irmã da Sra. Dursley, mas não se viam havia
+                muitos anos; na realidade a Sra. Dursley fingia que não tinha
+                irmã, porque esta e o marido imprestável eram o que havia de menos parecido
+                possível com os Dursley. Eles estremeciam só de pensar o que os vizinhos
+                iriam dizer se os Potter aparecessem na rua. Os Dursley sabiam que os
+                Potter tinham um filhinho, também, mas nunca o tinham visto. O garoto era
+                mais uma razão para manter os Potter a distância; eles não queriam que Duda se
+                misturasse com uma criança daquelas. Quando o Sr. e a Sra. Dursley acordaram na
+                terça-feira monótona e cinzenta em que a nossa história começa, não havia nada
+                no céu nublado lá fora sugerindo as coisas estranhas e misteriosas que não
+                tardariam a acontecer por todo o país. O Sr. Dursley cantarolava ao
+                escolher a gravata mais sem graça do mundo para ir trabalhar e a
+                Sra. Dursley fofocava alegremente enquanto lutava para encaixar um Duda
+                aos berros na cadeirinha alta.
+                Nenhum deles reparou em uma coruja parda que passou, batendo as asas, pela janela.
+                Às oito e meia, o Sr. Dursley apanhou a pasta, deu um beijinho
+                no rosto da Sra. Dursley e tentou dar um beijo de despedida em
+                Duda mas não conseguiu, porque na hora Duda estava tendo um acesso de
+                raiva e atirava o cereal nas paredes.
+                – Pestinha – disse rindo contrafeito o Sr. Dursley ao sair de casa.
+                Entrou no carro e deu marcha à ré para sair do estacionamento do número quatro.
+                Foi na esquina da rua que ele notou o primeiro indício de que algo
+                estranho ocorria – um gato lia um mapa. Por um instante o Sr. Dursley não
+                percebeu o que vira – em seguida virou rapidamente a cabeça para dar uma
+                segunda olhada. Havia um gato de listras amarelas sentado na esquina da rua dos
+                Alfeneiros, mas não havia nenhum mapa à vista. Em que estaria pensando
+                naquela hora? Devia ter sido um efeito da luz. Ele piscou e arregalou
+                os olhos para o gato. O gato o encarou. Enquanto virava a"
+
+            />
+
+    </ScrollView>
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
