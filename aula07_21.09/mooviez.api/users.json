@@ -1,0 +1,16 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Aluno",
+            "email": "aluno@sptech.school",
+            "password": "sptechaluno"
+        },
+        {
+            "id": 2,
+            "name": "Admin",
+            "email": "admin@sptech.school",
+            "password": "sptechadmin"
+        }
+    ]
+}
