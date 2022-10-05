@@ -1,10 +1,8 @@
 package br.com.mooviez
 
+
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
-import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import br.com.mooviez.databinding.ActivityMainBinding
 import br.com.mooviez.models.FilmeResponse
@@ -16,7 +14,6 @@ import br.com.mooviez.services.Filme
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import retrofit2.create
 
 class MainActivity : AppCompatActivity() {
 
@@ -58,6 +55,27 @@ class MainActivity : AppCompatActivity() {
 
         })
 
+        val teste = "";
+    }
+
+    private fun salvarToken(token: String){
+
+        val preferences = getSharedPreferences(
+            "CREDENCIAIS",
+            MODE_PRIVATE
+        )
+
+        val editor = preferences.edit();
+
+        editor.putString("token", token);
+
+        editor.apply()
+
+        irSegundaTela()
+    }
+
+    private fun irSegundaTela() {
+        TODO("Not yet implemented")
     }
 
     fun chamarFilmes(token: String){
